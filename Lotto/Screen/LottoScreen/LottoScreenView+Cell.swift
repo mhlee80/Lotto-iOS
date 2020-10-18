@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 extension LottoScreenView {
 }
@@ -41,20 +42,15 @@ extension LottoScreenView {
       super.init(style: style, reuseIdentifier: reuseIdentifier)
       selectionStyle = .none
       backgroundColor = .clear
-
-      stackView.translatesAutoresizingMaskIntoConstraints = false
       
       contentView.addSubview(stackView)
       for label in numberLabels {
         stackView.addArrangedSubview(label)
       }
-      
-      NSLayoutConstraint.activate([
-        stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-        stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-      ])
+
+      stackView.snp.makeConstraints { make in
+        make.top.bottom.centerX.centerY.equalToSuperview()
+      }
     }
     
     required init?(coder aDecoder: NSCoder) {
