@@ -8,4 +8,5 @@ target 'Lotto' do
   # Pods for Lotto
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SnapKit'
 end

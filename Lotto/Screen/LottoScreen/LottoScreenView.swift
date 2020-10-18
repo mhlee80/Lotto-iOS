@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import RxSwift
+import SnapKit
 
 class LottoScreenView: UIViewController, LottoScreenViewProtocol {
   enum Constant {
@@ -46,25 +47,18 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     view.backgroundColor = .white
-  
-    tableView.translatesAutoresizingMaskIntoConstraints = false
-    tryButton.translatesAutoresizingMaskIntoConstraints = false
-    
+      
     view.addSubview(tableView)
     view.addSubview(tryButton)
-        
-    NSLayoutConstraint.activate([
-      tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-      tableView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-      tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
-      tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-    ])
+            
+    tableView.snp.makeConstraints { make in
+      make.centerX.centerY.leading.trailing.equalToSuperview()
+    }
     
-    NSLayoutConstraint.activate([
-      tryButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-      tryButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-    ])
-        
+    tryButton.snp.makeConstraints { make in
+      make.bottom.centerX.equalToSuperview()
+    }
+            
     presenter.numbersList.asObservable()
       .bind(to: tableView
         .rx
