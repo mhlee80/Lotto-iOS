@@ -30,11 +30,7 @@ protocol LottoScreenPresenterProtocol {
   func viewDidAppear()
   func viewWillDisappear()
   func viewDidDisappear()
-  
-//  var numbersList: [[Int]] { get }
-  
-//  var listenerForNumbersList: (([[Int]]) -> Void)? { get set }
-  
+    
   var numbersList: BehaviorRelay<[[Int]]> { get }
   
   func viewDidPressTry()

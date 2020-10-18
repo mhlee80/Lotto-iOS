@@ -10,7 +10,6 @@
 		073CCECB84EDC0F1E245D93F /* Pods_Lotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EBED1268058099999DD56D /* Pods_Lotto.framework */; };
 		822F3315253816B4000A6DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3314253816B4000A6DBE /* AppDelegate.swift */; };
 		822F3317253816B4000A6DBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3316253816B4000A6DBE /* SceneDelegate.swift */; };
-		822F3319253816B4000A6DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3318253816B4000A6DBE /* ViewController.swift */; };
 		822F331E253816B7000A6DBE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 822F331D253816B7000A6DBE /* Assets.xcassets */; };
 		822F3321253816B7000A6DBE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 822F331F253816B7000A6DBE /* LaunchScreen.storyboard */; };
 		822F332E25381824000A6DBE /* LottoScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F332D25381824000A6DBE /* LottoScreenProtocols.swift */; };
@@ -29,7 +28,6 @@
 		822F3311253816B4000A6DBE /* Lotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822F3314253816B4000A6DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		822F3316253816B4000A6DBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		822F3318253816B4000A6DBE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		822F331D253816B7000A6DBE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		822F3320253816B7000A6DBE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		822F3322253816B7000A6DBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,7 +89,6 @@
 				822F332B253817DB000A6DBE /* Screen */,
 				822F3314253816B4000A6DBE /* AppDelegate.swift */,
 				822F3316253816B4000A6DBE /* SceneDelegate.swift */,
-				822F3318253816B4000A6DBE /* ViewController.swift */,
 				822F331D253816B7000A6DBE /* Assets.xcassets */,
 				822F331F253816B7000A6DBE /* LaunchScreen.storyboard */,
 				822F3322253816B7000A6DBE /* Info.plist */,
@@ -257,7 +254,6 @@
 				8231B850253BE5DB00E62521 /* SizedLabel.swift in Sources */,
 				822F333125381833000A6DBE /* LottoScreenWireframe.swift in Sources */,
 				822F333725381842000A6DBE /* LottoScreenPresenter.swift in Sources */,
-				822F3319253816B4000A6DBE /* ViewController.swift in Sources */,
 				822F3315253816B4000A6DBE /* AppDelegate.swift in Sources */,
 				822F333A2538184A000A6DBE /* LottoScreenView.swift in Sources */,
 				822F3317253816B4000A6DBE /* SceneDelegate.swift in Sources */,
