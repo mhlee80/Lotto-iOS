@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073CCECB84EDC0F1E245D93F /* Pods_Lotto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93EBED1268058099999DD56D /* Pods_Lotto.framework */; };
 		822F3315253816B4000A6DBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3314253816B4000A6DBE /* AppDelegate.swift */; };
 		822F3317253816B4000A6DBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3316253816B4000A6DBE /* SceneDelegate.swift */; };
 		822F3319253816B4000A6DBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3318253816B4000A6DBE /* ViewController.swift */; };
@@ -17,11 +18,14 @@
 		822F33342538183B000A6DBE /* LottoScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F33332538183B000A6DBE /* LottoScreenInteractor.swift */; };
 		822F333725381842000A6DBE /* LottoScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F333625381842000A6DBE /* LottoScreenPresenter.swift */; };
 		822F333A2538184A000A6DBE /* LottoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F33392538184A000A6DBE /* LottoScreenView.swift */; };
-		822F333F253831C0000A6DBE /* LottoScreenView+ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F333E253831C0000A6DBE /* LottoScreenView+ColumnFlowLayout.swift */; };
+		822F333F253831C0000A6DBE /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F333E253831C0000A6DBE /* ColumnFlowLayout.swift */; };
 		822F3342253832CA000A6DBE /* LottoScreenView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */; };
+		8231B84A253BD8A200E62521 /* ContentSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B849253BD8A200E62521 /* ContentSizedTableView.swift */; };
+		8231B850253BE5DB00E62521 /* SizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B84F253BE5DB00E62521 /* SizedLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		74E7FB3AA9E518F3437B765B /* Pods-Lotto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto.debug.xcconfig"; path = "Target Support Files/Pods-Lotto/Pods-Lotto.debug.xcconfig"; sourceTree = "<group>"; };
 		822F3311253816B4000A6DBE /* Lotto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lotto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		822F3314253816B4000A6DBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		822F3316253816B4000A6DBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,8 +38,12 @@
 		822F33332538183B000A6DBE /* LottoScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoScreenInteractor.swift; sourceTree = "<group>"; };
 		822F333625381842000A6DBE /* LottoScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoScreenPresenter.swift; sourceTree = "<group>"; };
 		822F33392538184A000A6DBE /* LottoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoScreenView.swift; sourceTree = "<group>"; };
-		822F333E253831C0000A6DBE /* LottoScreenView+ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LottoScreenView+ColumnFlowLayout.swift"; sourceTree = "<group>"; };
+		822F333E253831C0000A6DBE /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LottoScreenView+Cell.swift"; sourceTree = "<group>"; };
+		8231B849253BD8A200E62521 /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
+		8231B84F253BE5DB00E62521 /* SizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedLabel.swift; sourceTree = "<group>"; };
+		93EBED1268058099999DD56D /* Pods_Lotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D782D3E98A8FD3CB40910F69 /* Pods-Lotto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto.release.xcconfig"; path = "Target Support Files/Pods-Lotto/Pods-Lotto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				073CCECB84EDC0F1E245D93F /* Pods_Lotto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C176EC66561F7A692E1A7E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93EBED1268058099999DD56D /* Pods_Lotto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		822F3308253816B4000A6DBE = {
 			isa = PBXGroup;
 			children = (
 				822F3313253816B4000A6DBE /* Lotto */,
 				822F3312253816B4000A6DBE /* Products */,
+				B0CEF83C055DCE2FD781FB0A /* Pods */,
+				2C176EC66561F7A692E1A7E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +87,7 @@
 		822F3313253816B4000A6DBE /* Lotto */ = {
 			isa = PBXGroup;
 			children = (
+				8231B84C253BE4A400E62521 /* Util */,
 				822F332B253817DB000A6DBE /* Screen */,
 				822F3314253816B4000A6DBE /* AppDelegate.swift */,
 				822F3316253816B4000A6DBE /* SceneDelegate.swift */,
@@ -95,10 +115,28 @@
 				822F33332538183B000A6DBE /* LottoScreenInteractor.swift */,
 				822F333625381842000A6DBE /* LottoScreenPresenter.swift */,
 				822F33392538184A000A6DBE /* LottoScreenView.swift */,
-				822F333E253831C0000A6DBE /* LottoScreenView+ColumnFlowLayout.swift */,
 				822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */,
 			);
 			path = LottoScreen;
+			sourceTree = "<group>";
+		};
+		8231B84C253BE4A400E62521 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				822F333E253831C0000A6DBE /* ColumnFlowLayout.swift */,
+				8231B849253BD8A200E62521 /* ContentSizedTableView.swift */,
+				8231B84F253BE5DB00E62521 /* SizedLabel.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		B0CEF83C055DCE2FD781FB0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				74E7FB3AA9E518F3437B765B /* Pods-Lotto.debug.xcconfig */,
+				D782D3E98A8FD3CB40910F69 /* Pods-Lotto.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 822F3325253816B7000A6DBE /* Build configuration list for PBXNativeTarget "Lotto" */;
 			buildPhases = (
+				34CB89216D617D9638AB9875 /* [CP] Check Pods Manifest.lock */,
 				822F330D253816B4000A6DBE /* Sources */,
 				822F330E253816B4000A6DBE /* Frameworks */,
 				822F330F253816B4000A6DBE /* Resources */,
+				74C5D878BC1141068F818B49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -165,6 +205,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		34CB89216D617D9638AB9875 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lotto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		74C5D878BC1141068F818B49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lotto/Pods-Lotto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Lotto/Pods-Lotto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Lotto/Pods-Lotto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		822F330D253816B4000A6DBE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -172,6 +254,7 @@
 			files = (
 				822F332E25381824000A6DBE /* LottoScreenProtocols.swift in Sources */,
 				822F3342253832CA000A6DBE /* LottoScreenView+Cell.swift in Sources */,
+				8231B850253BE5DB00E62521 /* SizedLabel.swift in Sources */,
 				822F333125381833000A6DBE /* LottoScreenWireframe.swift in Sources */,
 				822F333725381842000A6DBE /* LottoScreenPresenter.swift in Sources */,
 				822F3319253816B4000A6DBE /* ViewController.swift in Sources */,
@@ -179,7 +262,8 @@
 				822F333A2538184A000A6DBE /* LottoScreenView.swift in Sources */,
 				822F3317253816B4000A6DBE /* SceneDelegate.swift in Sources */,
 				822F33342538183B000A6DBE /* LottoScreenInteractor.swift in Sources */,
-				822F333F253831C0000A6DBE /* LottoScreenView+ColumnFlowLayout.swift in Sources */,
+				822F333F253831C0000A6DBE /* ColumnFlowLayout.swift in Sources */,
+				8231B84A253BD8A200E62521 /* ContentSizedTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +399,7 @@
 		};
 		822F3326253816B7000A6DBE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74E7FB3AA9E518F3437B765B /* Pods-Lotto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -334,6 +419,7 @@
 		};
 		822F3327253816B7000A6DBE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D782D3E98A8FD3CB40910F69 /* Pods-Lotto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

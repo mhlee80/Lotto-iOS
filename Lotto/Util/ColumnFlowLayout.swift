@@ -8,7 +8,6 @@
 import UIKit
 
 class ColumnFlowLayout: UICollectionViewFlowLayout {
-  
   let cellsPerRow: Int
   let itemHeight: CGFloat
   

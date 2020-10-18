@@ -8,7 +8,40 @@
 import UIKit
 
 extension LottoScreenView {
-  class Cell: UICollectionViewCell {
+//  class Cell: UICollectionViewCell {
+//    enum Constant {
+//    }
+//
+//    typealias C = Constant
+//
+//    static var reuseIdentifier: String { return self.classForCoder().description() }
+//
+//    lazy var numberLabel: UILabel = {
+//      let v = UILabel()
+//      return v
+//    }()
+//
+//    override init(frame: CGRect) {
+//      super.init(frame: frame)
+//
+//      numberLabel.translatesAutoresizingMaskIntoConstraints = false
+//
+//      contentView.addSubview(numberLabel)
+//
+//      NSLayoutConstraint.activate([
+//        numberLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+//        numberLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+//      ])
+//    }
+//
+//    required init?(coder aDecoder: NSCoder) {
+//      fatalError("init(coder:) has not been implemented")
+//    }
+//  }
+}
+
+extension LottoScreenView {
+  class Cell: UITableViewCell {
     enum Constant {
     }
     
@@ -16,26 +49,53 @@ extension LottoScreenView {
     
     static var reuseIdentifier: String { return self.classForCoder().description() }
     
-    lazy var numberLabel: UILabel = {
-      let v = UILabel()
+    private lazy var stackView: UIStackView = {
+      let v = UIStackView()
+      v.axis = .horizontal
+      v.spacing = 10
       return v
     }()
-        
-    override init(frame: CGRect) {
-      super.init(frame: frame)
+    
+    private lazy var numberLabels: [UILabel] = {
+      var vs = [UILabel]()
+      for i in 0..<6 {
+        let v = SizedLabel()
+        v.size = .init(width: 30, height: 30)
+        v.textAlignment = .center
+        vs.append(v)
+      }
+      return vs
+    }()
+                
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+      super.init(style: style, reuseIdentifier: reuseIdentifier)
+      selectionStyle = .none
+      backgroundColor = .clear
+
+      stackView.translatesAutoresizingMaskIntoConstraints = false
       
-      numberLabel.translatesAutoresizingMaskIntoConstraints = false
-      
-      contentView.addSubview(numberLabel)
+      contentView.addSubview(stackView)
+      for label in numberLabels {
+        stackView.addArrangedSubview(label)
+      }
       
       NSLayoutConstraint.activate([
-        numberLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-        numberLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        stackView.topAnchor.constraint(equalTo: contentView.topAnchor),
+        stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+        stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+        stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
       ])
     }
     
     required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
+    }
+    
+    func configureWithNumbers(_ numbers: [Int]) {
+      for i in 0..<numbers.count {
+        let l = numberLabels[i]
+        l.text = "\(numbers[i])"
+      }
     }
   }
 }

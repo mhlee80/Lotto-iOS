@@ -32,7 +32,7 @@ protocol LottoScreenPresenterProtocol {
   
   var numbersList: [[Int]] { get }
   
-  var onNumbersListReloaded: (() -> Void)? { get set }
+  var listenerForNumbersList: (([[Int]]) -> Void)? { get set }
   
   func viewDidPressTry()
 }
