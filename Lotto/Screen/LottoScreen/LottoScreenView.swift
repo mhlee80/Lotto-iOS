@@ -100,8 +100,11 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
                 cell.configureWithNumbers(numbers) }
       .disposed(by: disposeBag)
     
-    tryButton.addTarget(self, action: #selector(handleTryPressed(_:)), for: .touchUpInside)
-    
+    tryButton.rx.tap
+      .bind { [unowned self] in
+        self.presenter.viewDidPressTry() }
+      .disposed(by: disposeBag)
+        
     DispatchQueue.main.async { [unowned self] in
       self.presenter.viewDidLoad()
     }
@@ -110,11 +113,7 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
   override var preferredStatusBarStyle: UIStatusBarStyle {
     return .default
   }
-  
-  @objc func handleTryPressed(_ sender: UIButton) {
-    presenter.viewDidPressTry()
-  }
-  
+    
 //  func handleNumbersListUpdated() {
 ////    collectionView.reloadData()
 //    tableView.reloadData()
