@@ -49,7 +49,9 @@ extension LottoScreenView {
       }
 
       stackView.snp.makeConstraints { make in
-        make.top.bottom.centerX.centerY.equalToSuperview()
+        make.top.equalToSuperview().offset(10)
+        make.bottom.equalToSuperview().offset(-10)
+        make.centerX.centerY.equalToSuperview()
       }
     }
     
