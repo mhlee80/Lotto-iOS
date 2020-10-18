@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxCocoa
 
 struct LottoScreenParams {
 }
@@ -30,9 +31,11 @@ protocol LottoScreenPresenterProtocol {
   func viewWillDisappear()
   func viewDidDisappear()
   
-  var numbersList: [[Int]] { get }
+//  var numbersList: [[Int]] { get }
   
-  var listenerForNumbersList: (([[Int]]) -> Void)? { get set }
+//  var listenerForNumbersList: (([[Int]]) -> Void)? { get set }
+  
+  var numbersList: BehaviorRelay<[[Int]]> { get }
   
   func viewDidPressTry()
 }

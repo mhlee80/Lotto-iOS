@@ -6,21 +6,21 @@
 //
 
 import Foundation
-//import RxCocoa
+import RxCocoa
 
 class LottoScreenPresenter: LottoScreenPresenterProtocol {
   var interactor: LottoScreenInteractorProtocol
   var wireframe: LottoScreenWireframeProtocol
   
-  var numbersList: [[Int]] = [[Int]()] {
-    didSet {
-      listenerForNumbersList?(numbersList)
-    }
-  }
+//  var numbersList: [[Int]] = [[Int]()] {
+//    didSet {
+//      listenerForNumbersList?(numbersList)
+//    }
+//  }
   
-  var listenerForNumbersList: (([[Int]]) -> Void)? = nil
+//  var listenerForNumbersList: (([[Int]]) -> Void)? = nil
   
-//  var numbersList: BehaviorRelay<[[Int]]> = .init(value: [[Int]]())
+  var numbersList: BehaviorRelay<[[Int]]> = .init(value: [[Int]]())
   
   init(interactor: LottoScreenInteractorProtocol, wireframe: LottoScreenWireframeProtocol) {
     self.interactor = interactor
@@ -33,7 +33,7 @@ class LottoScreenPresenter: LottoScreenPresenterProtocol {
   
   func viewDidPressTry() {
     let list = interactor.getNumbersList()
-    self.numbersList = list
-//    numbersList.accept(list)
+//    self.numbersList = list
+    numbersList.accept(list)
   }
 }

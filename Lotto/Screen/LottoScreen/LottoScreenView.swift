@@ -7,6 +7,8 @@
 
 import UIKit
 import Foundation
+import RxSwift
+//import RxCocoa
 
 class LottoScreenView: UIViewController, LottoScreenViewProtocol {
   enum Constant {
@@ -16,6 +18,7 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
   
   var presenter: LottoScreenPresenterProtocol
   
+  let disposeBag = DisposeBag()
 //  lazy var collectionView: UICollectionView = {
 //    let layout = ColumnFlowLayout(cellsPerRow: 6,
 //                                  minimumInteritemSpacing: 10,
@@ -83,11 +86,19 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     ])
     
 //    collectionView.dataSource = self
-    tableView.dataSource = self
+//    tableView.dataSource = self
     
-    presenter.listenerForNumbersList = { [weak self] _ in
-      self?.handleNumbersListUpdated()
-    }
+//    presenter.listenerForNumbersList = { [weak self] _ in
+//      self?.handleNumbersListUpdated()
+//    }
+    
+    presenter.numbersList.asObservable()
+      .bind(to: tableView
+        .rx
+        .items(cellIdentifier: Cell.reuseIdentifier,
+               cellType: Cell.self)) { row, numbers, cell in
+                cell.configureWithNumbers(numbers) }
+      .disposed(by: disposeBag)
     
     tryButton.addTarget(self, action: #selector(handleTryPressed(_:)), for: .touchUpInside)
     
@@ -104,10 +115,10 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     presenter.viewDidPressTry()
   }
   
-  func handleNumbersListUpdated() {
-//    collectionView.reloadData()
-    tableView.reloadData()
-  }
+//  func handleNumbersListUpdated() {
+////    collectionView.reloadData()
+//    tableView.reloadData()
+//  }
 }
 
 //extension LottoScreenView: UICollectionViewDataSource {
@@ -127,14 +138,14 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
 //  }
 //}
 
-extension LottoScreenView: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return presenter.numbersList.count
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as! Cell
-    cell.configureWithNumbers(presenter.numbersList[indexPath.row])
-    return cell
-  }
-}
+//extension LottoScreenView: UITableViewDataSource {
+//  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//    return presenter.numbersList.count
+//  }
+//
+//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let cell = tableView.dequeueReusableCell(withIdentifier: Cell.reuseIdentifier, for: indexPath) as! Cell
+//    cell.configureWithNumbers(presenter.numbersList[indexPath.row])
+//    return cell
+//  }
+//}
