@@ -9,4 +9,5 @@ target 'Lotto' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SnapKit'
+  pod 'MaterialComponents'
 end

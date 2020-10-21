@@ -21,6 +21,7 @@
 		822F3342253832CA000A6DBE /* LottoScreenView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */; };
 		8231B84A253BD8A200E62521 /* ContentSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B849253BD8A200E62521 /* ContentSizedTableView.swift */; };
 		8231B850253BE5DB00E62521 /* SizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B84F253BE5DB00E62521 /* SizedLabel.swift */; };
+		8233A24C254026CD0089088A /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8233A24B254026CD0089088A /* AppTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LottoScreenView+Cell.swift"; sourceTree = "<group>"; };
 		8231B849253BD8A200E62521 /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
 		8231B84F253BE5DB00E62521 /* SizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedLabel.swift; sourceTree = "<group>"; };
+		8233A24B254026CD0089088A /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		93EBED1268058099999DD56D /* Pods_Lotto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lotto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D782D3E98A8FD3CB40910F69 /* Pods-Lotto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lotto.release.xcconfig"; path = "Target Support Files/Pods-Lotto/Pods-Lotto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				8231B84C253BE4A400E62521 /* Util */,
 				822F332B253817DB000A6DBE /* Screen */,
 				822F3314253816B4000A6DBE /* AppDelegate.swift */,
+				8233A24B254026CD0089088A /* AppTheme.swift */,
 				822F3316253816B4000A6DBE /* SceneDelegate.swift */,
 				822F331D253816B7000A6DBE /* Assets.xcassets */,
 				822F331F253816B7000A6DBE /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 				822F333A2538184A000A6DBE /* LottoScreenView.swift in Sources */,
 				822F3317253816B4000A6DBE /* SceneDelegate.swift in Sources */,
 				822F33342538183B000A6DBE /* LottoScreenInteractor.swift in Sources */,
+				8233A24C254026CD0089088A /* AppTheme.swift in Sources */,
 				822F333F253831C0000A6DBE /* ColumnFlowLayout.swift in Sources */,
 				8231B84A253BD8A200E62521 /* ContentSizedTableView.swift in Sources */,
 			);

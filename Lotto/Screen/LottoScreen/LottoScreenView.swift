@@ -9,9 +9,11 @@ import UIKit
 import Foundation
 import RxSwift
 import SnapKit
+import MaterialComponents
 
 class LottoScreenView: UIViewController, LottoScreenViewProtocol {
   enum Constant {
+    static let colorScheme: MDCSemanticColorScheme = AppTheme.colorScheme
   }
   
   typealias C = Constant
@@ -28,8 +30,16 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     return v
   }()
   
+  lazy var buttonScheme: MDCContainerScheming = {
+    let s = MDCContainerScheme()
+    s.colorScheme = C.colorScheme
+    return s
+  }()
+  
   lazy var tryButton: UIButton = {
-    let v = UIButton(type: .system)
+    let v = MDCButton()
+    v.applyContainedTheme(withScheme: buttonScheme)
+    v.layer.cornerRadius = 0
     v.setTitle("Try", for: .normal)
     return v
   }()
@@ -56,7 +66,8 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     }
     
     tryButton.snp.makeConstraints { make in
-      make.bottom.centerX.equalToSuperview()
+      make.left.right.bottom.equalToSuperview()
+      make.height.equalTo(48)
     }
             
     presenter.numbersList.asObservable()
