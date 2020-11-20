@@ -12,7 +12,7 @@ class LottoScreenInteractor: LottoScreenInteractorProtocol {
   func getNumbersList() -> [[Int]] {
     var numbersList = [[Int]]()
     var candidates = Array(1...45)
-    for _ in 0..<5 { // 5장
+    for _ in 0..<7 { // 5장
       var numbers = [Int]()
       
       for _ in 0..<6 { // 6개 숫자
