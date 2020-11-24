@@ -40,7 +40,7 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     let v = MDCButton()
     v.applyContainedTheme(withScheme: buttonScheme)
     v.layer.cornerRadius = 0
-    v.setTitle("Try", for: .normal)
+    v.setTitle("번호 생성", for: .normal)
     return v
   }()
  
@@ -67,7 +67,7 @@ class LottoScreenView: UIViewController, LottoScreenViewProtocol {
     
     tryButton.snp.makeConstraints { make in
       make.left.right.bottom.equalToSuperview()
-      make.height.equalTo(48)
+      make.height.equalTo(68)
     }
             
     presenter.numbersList.asObservable()

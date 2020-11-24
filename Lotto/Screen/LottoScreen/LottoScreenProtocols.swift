@@ -41,7 +41,7 @@ protocol LottoScreenInteractorProtocol {
 }
 
 protocol LottoScreenWireframeProtocol {
-  static func createModule(params: LottoScreenParams) -> UIViewController
+  static func createModule(params: LottoScreenParams, dismissHandler: ((LottoScreenResult?, Error?) -> Void)?) -> UIViewController
   var params: LottoScreenParams { get }
 }
 

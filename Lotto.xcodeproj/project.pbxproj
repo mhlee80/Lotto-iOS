@@ -19,6 +19,14 @@
 		822F333A2538184A000A6DBE /* LottoScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F33392538184A000A6DBE /* LottoScreenView.swift */; };
 		822F333F253831C0000A6DBE /* ColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F333E253831C0000A6DBE /* ColumnFlowLayout.swift */; };
 		822F3342253832CA000A6DBE /* LottoScreenView+Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */; };
+		823090E3256B720500A4A714 /* LandingScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823090DD256B720400A4A714 /* LandingScreenPresenter.swift */; };
+		823090E4256B720500A4A714 /* LandingScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823090DE256B720400A4A714 /* LandingScreenInteractor.swift */; };
+		823090E5256B720500A4A714 /* LandingScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823090DF256B720400A4A714 /* LandingScreenView.swift */; };
+		823090E6256B720500A4A714 /* LandingScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823090E0256B720400A4A714 /* LandingScreenWireframe.swift */; };
+		823090E8256B720500A4A714 /* LandingScreenProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823090E2256B720500A4A714 /* LandingScreenProtocols.swift */; };
+		82309106256B742800A4A714 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82309105256B742800A4A714 /* UserDefaultsService.swift */; };
+		8230910A256B77CC00A4A714 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82309109256B77CC00A4A714 /* UIViewController+Alert.swift */; };
+		82309129256B80AD00A4A714 /* WindowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82309128256B80AD00A4A714 /* WindowService.swift */; };
 		8231B84A253BD8A200E62521 /* ContentSizedTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B849253BD8A200E62521 /* ContentSizedTableView.swift */; };
 		8231B850253BE5DB00E62521 /* SizedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8231B84F253BE5DB00E62521 /* SizedLabel.swift */; };
 		8233A24C254026CD0089088A /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8233A24B254026CD0089088A /* AppTheme.swift */; };
@@ -39,6 +47,14 @@
 		822F33392538184A000A6DBE /* LottoScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoScreenView.swift; sourceTree = "<group>"; };
 		822F333E253831C0000A6DBE /* ColumnFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnFlowLayout.swift; sourceTree = "<group>"; };
 		822F3341253832CA000A6DBE /* LottoScreenView+Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LottoScreenView+Cell.swift"; sourceTree = "<group>"; };
+		823090DD256B720400A4A714 /* LandingScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenPresenter.swift; sourceTree = "<group>"; };
+		823090DE256B720400A4A714 /* LandingScreenInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenInteractor.swift; sourceTree = "<group>"; };
+		823090DF256B720400A4A714 /* LandingScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenView.swift; sourceTree = "<group>"; };
+		823090E0256B720400A4A714 /* LandingScreenWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenWireframe.swift; sourceTree = "<group>"; };
+		823090E2256B720500A4A714 /* LandingScreenProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingScreenProtocols.swift; sourceTree = "<group>"; };
+		82309105256B742800A4A714 /* UserDefaultsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
+		82309109256B77CC00A4A714 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		82309128256B80AD00A4A714 /* WindowService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowService.swift; sourceTree = "<group>"; };
 		8231B849253BD8A200E62521 /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
 		8231B84F253BE5DB00E62521 /* SizedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizedLabel.swift; sourceTree = "<group>"; };
 		8233A24B254026CD0089088A /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -88,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				8231B84C253BE4A400E62521 /* Util */,
+				82309104256B740900A4A714 /* Service */,
 				822F332B253817DB000A6DBE /* Screen */,
 				822F3314253816B4000A6DBE /* AppDelegate.swift */,
 				8233A24B254026CD0089088A /* AppTheme.swift */,
@@ -102,6 +119,7 @@
 		822F332B253817DB000A6DBE /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				823090DB256B6FD100A4A714 /* LandingScreen */,
 				822F332C253817ED000A6DBE /* LottoScreen */,
 			);
 			path = Screen;
@@ -120,12 +138,34 @@
 			path = LottoScreen;
 			sourceTree = "<group>";
 		};
+		823090DB256B6FD100A4A714 /* LandingScreen */ = {
+			isa = PBXGroup;
+			children = (
+				823090E2256B720500A4A714 /* LandingScreenProtocols.swift */,
+				823090E0256B720400A4A714 /* LandingScreenWireframe.swift */,
+				823090DE256B720400A4A714 /* LandingScreenInteractor.swift */,
+				823090DD256B720400A4A714 /* LandingScreenPresenter.swift */,
+				823090DF256B720400A4A714 /* LandingScreenView.swift */,
+			);
+			path = LandingScreen;
+			sourceTree = "<group>";
+		};
+		82309104256B740900A4A714 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				82309128256B80AD00A4A714 /* WindowService.swift */,
+				82309105256B742800A4A714 /* UserDefaultsService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8231B84C253BE4A400E62521 /* Util */ = {
 			isa = PBXGroup;
 			children = (
 				822F333E253831C0000A6DBE /* ColumnFlowLayout.swift */,
 				8231B849253BD8A200E62521 /* ContentSizedTableView.swift */,
 				8231B84F253BE5DB00E62521 /* SizedLabel.swift */,
+				82309109256B77CC00A4A714 /* UIViewController+Alert.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -254,16 +294,24 @@
 			files = (
 				822F332E25381824000A6DBE /* LottoScreenProtocols.swift in Sources */,
 				822F3342253832CA000A6DBE /* LottoScreenView+Cell.swift in Sources */,
+				823090E5256B720500A4A714 /* LandingScreenView.swift in Sources */,
+				823090E8256B720500A4A714 /* LandingScreenProtocols.swift in Sources */,
 				8231B850253BE5DB00E62521 /* SizedLabel.swift in Sources */,
 				822F333125381833000A6DBE /* LottoScreenWireframe.swift in Sources */,
 				822F333725381842000A6DBE /* LottoScreenPresenter.swift in Sources */,
+				823090E6256B720500A4A714 /* LandingScreenWireframe.swift in Sources */,
 				822F3315253816B4000A6DBE /* AppDelegate.swift in Sources */,
+				823090E4256B720500A4A714 /* LandingScreenInteractor.swift in Sources */,
 				822F333A2538184A000A6DBE /* LottoScreenView.swift in Sources */,
 				822F3317253816B4000A6DBE /* SceneDelegate.swift in Sources */,
 				822F33342538183B000A6DBE /* LottoScreenInteractor.swift in Sources */,
 				8233A24C254026CD0089088A /* AppTheme.swift in Sources */,
 				822F333F253831C0000A6DBE /* ColumnFlowLayout.swift in Sources */,
+				82309129256B80AD00A4A714 /* WindowService.swift in Sources */,
+				82309106256B742800A4A714 /* UserDefaultsService.swift in Sources */,
+				8230910A256B77CC00A4A714 /* UIViewController+Alert.swift in Sources */,
 				8231B84A253BD8A200E62521 /* ContentSizedTableView.swift in Sources */,
+				823090E3256B720500A4A714 /* LandingScreenPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,10 +458,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.wiwa.Lotto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,10 +479,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.wiwa.Lotto;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

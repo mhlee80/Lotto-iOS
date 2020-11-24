@@ -639,6 +639,8 @@ PODS:
   - MotionAnimator (2.8.1):
     - MotionInterchange (~> 1.6)
   - MotionInterchange (1.6.0)
+  - PMAlertController (4.0.1)
+  - ReSwift (6.0.0)
   - RxCocoa (5.1.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -646,12 +648,18 @@ PODS:
     - RxSwift (~> 5)
   - RxSwift (5.1.1)
   - SnapKit (5.0.1)
+  - SwiftyBeaver (1.9.1)
+  - WhatsNewKit (1.3.6)
 
 DEPENDENCIES:
   - MaterialComponents
+  - PMAlertController
+  - ReSwift
   - RxCocoa
   - RxSwift
   - SnapKit
+  - SwiftyBeaver
+  - WhatsNewKit
 
 SPEC REPOS:
   trunk:
@@ -660,10 +668,14 @@ SPEC REPOS:
     - MDFTextAccessibility
     - MotionAnimator
     - MotionInterchange
+    - PMAlertController
+    - ReSwift
     - RxCocoa
     - RxRelay
     - RxSwift
     - SnapKit
+    - SwiftyBeaver
+    - WhatsNewKit
 
 SPEC CHECKSUMS:
   MaterialComponents: e4a7c8b5eabe7856ef58f632fb5800a229bda5be
@@ -671,11 +683,15 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   MotionAnimator: ee16aa30567c5bae0fb2750c132915829cfaaf8a
   MotionInterchange: ead0e3ae1f3a5fb539e289debbc7ae036160a10d
+  PMAlertController: ab5fcf4d085b7878c9451466d701449c4bf6efb8
+  ReSwift: 14e6f9409fe6bdc635e588208296a01f43b959c9
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyBeaver: a1f5691458561414bcfab51874b2b7445451602b
+  WhatsNewKit: 1749efa3bab07512c4d6aa3645abb5bc4b49db58
 
-PODFILE CHECKSUM: 53bc81e363e30e639a4557aa3da2082ae541a3f9
+PODFILE CHECKSUM: 472934c1efbd57810e6c938e69ed784f95909035
 
 COCOAPODS: 1.9.3

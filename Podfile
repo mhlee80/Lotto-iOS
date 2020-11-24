@@ -6,8 +6,12 @@ target 'Lotto' do
   use_frameworks!
 
   # Pods for Lotto
+  pod 'SwiftyBeaver'
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'SnapKit'
   pod 'MaterialComponents'
+  pod 'WhatsNewKit'
+  pod 'ReSwift'
+  pod 'PMAlertController'
 end

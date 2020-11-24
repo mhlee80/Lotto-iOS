@@ -78,12 +78,6 @@ extension LottoScreenView {
       stackView.snp.makeConstraints { make in
         make.margins.equalTo(C.stackInsets)
       }
-      
-//      stackView.snp.makeConstraints { make in
-//        make.top.equalToSuperview().offset(10)
-//        make.bottom.equalToSuperview().offset(-10)
-//        make.centerX.centerY.equalToSuperview()
-//      }
     }
     
     required init?(coder aDecoder: NSCoder) {
